@@ -1,0 +1,213 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<title>FDRmania</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 1995 no tenía esto, pero tampoco tenía móviles -->
+<style>.parpadeo{animation:b 1s steps(1) infinite}@keyframes b{50%{visibility:hidden}}table{max-width:100%}img{max-width:100%;height:auto}</style>
+</head>
+<body background="roca.gif" bgcolor="#a0a0a0" text="#000000" link="#0000ee" vlink="#551a8b">
+
+<table width="100%" bgcolor="#000080" cellpadding="2"><tr><td>
+<font color="#ffff00" face="Courier New"><b><marquee>¡¡BIENVENIDO A FDRMANIA!! &mdash; DESTRUYENDO EL P-HACKING DESDE 1995 &mdash; CONTROLA TU FALSE DISCOVERY RATE O VETE A CASA &mdash; OPTIMIZADO PARA NETSCAPE NAVIGATOR 2.0 (800x600)</marquee></b></font>
+</td></tr></table>
+
+<center>
+<p><img src="logo.jpg" width="480" alt="FDRMANIA"></p>
+
+<table border="3" bgcolor="#ffff00" cellpadding="4"><tr><td align="center">
+<font face="Courier New" size="2"><b>/\/\/\/\/\</b></font>
+<font face="Arial" size="4"><b> &iexcl;EN CONSTRUCCI&Oacute;N! </b></font>
+<font face="Courier New" size="2"><b>/\/\/\/\/\</b></font><br>
+<font face="Comic Sans MS" size="2">Un obrero est&aacute; ajustando tus p-valores. Vuelva pronto.</font>
+</td></tr></table>
+
+<p><font face="Times New Roman" size="2">
+[ <a href="#salon">Sal&oacute;n de la Fama</a> |
+<a href="#colador">El Colador</a> |
+<a href="#muro">Muro de la Verg&uuml;enza</a> |
+<a href="#hereje">Bonferroni Apesta</a> ]
+</font></p>
+</center>
+
+<hr color="#ff0000" size="4">
+
+<a name="salon"></a>
+<h2><font face="Times New Roman" color="#800000">&#9733; El Sal&oacute;n de la Fama de 1995 &#9733;</font></h2>
+<table width="100%" bgcolor="#ffffff" border="2" cellpadding="8"><tr><td>
+<font face="Times New Roman" size="3">
+<p>En 1995, <b>Yoav Benjamini</b> y <b>Yosef Hochberg</b> publicaron en el <i>Journal of the Royal Statistical Society, Series B</i>
+un art&iacute;culo de doce p&aacute;ginas que cambi&oacute; la pregunta. Ya no: <i>&iquest;cu&aacute;l es la probabilidad de equivocarme
+al menos una vez?</i> Sino: <i>de todo lo que voy a llamar descubrimiento, &iquest;qu&eacute; fracci&oacute;n espero que sea humo?</i>
+A esa fracci&oacute;n esperada la llamaron <b>False Discovery Rate</b>.</p>
+
+<p>El propio Benjamini ha contado que el art&iacute;culo dio vueltas varios a&ntilde;os, rechazo tras rechazo, antes de
+encontrar casa. Hoy es uno de los papers de estad&iacute;stica m&aacute;s citados de la historia.</p>
+
+<p>&#9658; <a href="https://doi.org/10.1111/j.2517-6161.1995.tb02031.x">Benjamini &amp; Hochberg (1995). <i>Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing.</i> JRSS-B 57(1), 289&ndash;300.</a><br>
+&#9658; <a href="https://doi.org/10.1111/j.1467-9868.2010.00746.x">Benjamini (2010). <i>Discovering the false discovery rate.</i> JRSS-B 72(4), 405&ndash;416.</a> (la historia contada por &eacute;l)</p>
+</font>
+</td></tr></table>
+
+<hr color="#00ff00" size="4">
+
+<a name="colador"></a>
+<h2><font face="Times New Roman" color="#000080">&#9760; El Colador de Falsos Descubrimientos &#9760;</font></h2>
+<table width="100%" bgcolor="#c0c0c0" border="2" cellpadding="8"><tr><td>
+<font face="Times New Roman">
+<p>Pega tus p-valores (separados por espacios, comas o saltos de l&iacute;nea; vale <tt>0,03</tt> y <tt>0.03</tt>).
+Vienen cargados los quince del ejemplo del paper original.</p>
+<form name="colador" onsubmit="triturar(); return false;">
+<textarea name="ps" rows="5" cols="60">0.0001 0.0004 0.0019 0.0095 0.0201 0.0278 0.0298 0.0344 0.0459 0.3240 0.4262 0.5719 0.6528 0.7590 1.000</textarea><br>
+<b>q =</b> <select name="q">
+<option value="0.01">0.01 (monje)</option>
+<option value="0.05" selected>0.05 (cl&aacute;sico)</option>
+<option value="0.10">0.10 (permisivo)</option>
+</select>
+<input type="submit" value="&iexcl;&iexcl;TRITURAR MIS P-VALORES!!">
+</form>
+</font>
+<div id="salida"></div>
+</td></tr></table>
+
+<hr color="#0000ff" size="4">
+
+<a name="muro"></a>
+<h2><font face="Times New Roman" color="#800000">El Muro de la Verg&uuml;enza del P-Hacking</font></h2>
+<table width="100%" bgcolor="#ffffcc" border="2" cellpadding="8"><tr><td>
+<font face="Times New Roman">
+<p>Receta del art&iacute;culo con tres asteriscos: coge <b>60 variables</b>, cruza todas con todas
+(<b>1770 correlaciones</b>), y publica las que salgan con p &lt; 0,05. Aqu&iacute; hacemos lo mismo, pero con
+<b>ruido puro</b>: 60 variables independientes, 100 casos, ninguna relaci&oacute;n real. Ninguna.</p>
+<form onsubmit="muro(); return false;"><input type="submit" value="&iexcl;Fabricar un paper!"></form>
+<p><font face="Times New Roman" size="2">&iquest;Por qu&eacute; casi nunca sobrevive nada? Cuando todas las hip&oacute;tesis nulas son ciertas,
+todo descubrimiento es falso, y controlar la tasa de falsos descubrimientos equivale a controlar la probabilidad de colar uno solo:
+con q = 0,05, más o menos uno de cada veinte papers de ruido sale con algo. El colador no se deja enga&ntilde;ar por el ruido puro.</font></p>
+</font>
+<div id="paper"></div>
+</td></tr></table>
+
+<hr color="#ff00ff" size="4">
+
+<a name="hereje"></a>
+<h2><font face="Times New Roman" color="#000080">Bonferroni Apesta (El Rinc&oacute;n de la Herej&iacute;a)</font></h2>
+<table width="100%" bgcolor="#ffffff" border="2" cellpadding="8"><tr><td>
+<font face="Times New Roman">
+<p>Bonferroni controla el <b>FWER</b>: la probabilidad de colar <i>un solo</i> falso positivo entre todos tus tests.
+Para lograrlo divide tu &alpha; entre el n&uacute;mero de tests. Con 1770 correlaciones, cada una tiene que bajar de
+0,05/1770 &asymp; 0,00003. Muy honrado. Tambi&eacute;n muy ciego: con m tests grandes no descubres nada aunque est&eacute; ah&iacute;.</p>
+<p>Benjamini&ndash;Hochberg controla el <b>FDR</b>: acepta que entre tus descubrimientos habr&aacute; algo de humo,
+pero te garantiza que, en promedio, no pasar&aacute; de q. La receta cabe en una servilleta:</p>
+<pre>
+ 1. Ordena los m p-valores:  p(1) &lt;= p(2) &lt;= ... &lt;= p(m)
+ 2. Busca el mayor k con     p(k) &lt;= (k/m) q
+ 3. Declara descubrimientos  p(1), ..., p(k)
+</pre>
+<p>En el ejemplo del paper, Bonferroni encuentra 3 y BH encuentra 4. Pru&eacute;balo arriba.</p>
+<p><b>El converso.</b> Si de verdad necesitas controlar el FWER, tampoco hay excusa para el Bonferroni simple.
+<b>Holm (1979)</b> controla exactamente lo mismo y siempre encuentra al menos lo mismo: ordena los p-valores y compara
+el i-&eacute;simo con q/(m&minus;i+1), parando en el primero que no pasa. Bonferroni no es prudente: es Holm con la mitad del trabajo sin hacer.<br>
+<font size="2">Holm, S. (1979). <i>A Simple Sequentially Rejective Multiple Test Procedure.</i> Scandinavian Journal of Statistics 6(2), 65&ndash;70.</font></p>
+<p><font face="Comic Sans MS" color="#008000">Letra peque&ntilde;a de hereje responsable: cuando un solo falso positivo es grave,
+como en un ensayo cl&iacute;nico confirmatorio, controlar el FWER es lo correcto, y entonces Holm. FDR es para explorar:
+genes, correlaciones, cribados. Elige la tasa de error que corresponde a tu pregunta.</font></p>
+</font>
+</td></tr></table>
+
+<hr color="#ffff00" size="4">
+
+<center>
+<table border="1" width="500" bgcolor="#ffffff">
+<tr><td align="center"><font face="Times New Roman">
+<b>[ Anillo de la Nueva Somosaguas ]</b><br>
+<a href="https://nuevasomosaguas.github.io/laboratorios-y-simulaciones/">&lt;&lt; Sitio Anterior</a> |
+<a href="https://nuevasomosaguas.github.io/">Hub Central</a> |
+<a href="https://nuevasomosaguas.github.io/biblioteca-secundaria/">Sitio Siguiente &gt;&gt;</a>
+</font></td></tr>
+</table>
+
+<p><font face="Times New Roman" size="2">Eres el visitante n&uacute;mero</font><br>
+<table bgcolor="#000000" cellpadding="3" border="2"><tr><td><font face="Courier New" color="#00ff00" size="5"><b>001995</b></font></td></tr></table></p>
+
+<table cellspacing="4"><tr>
+<td bgcolor="#000080" width="88" height="31" align="center"><font face="Arial" size="1" color="#ffffff"><b>Best viewed with<br>ANY BROWSER</b></font></td>
+<td bgcolor="#ffffff" width="88" height="31" align="center"><font face="Arial" size="1"><b>Made with<br>NOTEPAD</b></font></td>
+<td bgcolor="#008000" width="88" height="31" align="center"><font face="Arial" size="1" color="#ffff00"><b>VALID<br>HTML 3.2</b></font></td>
+<td bgcolor="#800000" width="88" height="31" align="center"><font face="Arial" size="1" color="#ffffff"><b>Powered by<br>JRSS-B (1995)</b></font></td>
+</tr></table>
+</center>
+
+<script>
+// Benjamini-Hochberg: devuelve k, el número de descubrimientos (los k p-valores más pequeños)
+function bh(ps, q) {
+  var s = ps.slice().sort(function (a, b) { return a - b; }), m = s.length, k = 0;
+  for (var i = 1; i <= m; i++) if (s[i - 1] <= i / m * q) k = i;
+  return k;
+}
+// El ejemplo del paper: BH rechaza 4 a q = 0.05 (Bonferroni, 3)
+console.assert(bh([0.0001,0.0004,0.0019,0.0095,0.0201,0.0278,0.0298,0.0344,0.0459,0.3240,0.4262,0.5719,0.6528,0.7590,1], 0.05) === 4, "bh roto");
+
+function triturar() {
+  var f = document.colador, q = parseFloat(f.q.value);
+  var ps = (f.ps.value.match(/\d+(?:[.,]\d+)?(?:e-?\d+)?/gi) || []).map(function (t) { return parseFloat(t.replace(",", ".")); });
+  if (!ps.length || ps.some(function (p) { return !(p >= 0 && p <= 1); })) {
+    alert("Eso no son p-valores. Un p-valor vive entre 0 y 1.");
+    return;
+  }
+  var m = ps.length, k = bh(ps, q), s = ps.slice().sort(function (a, b) { return a - b; });
+  var bonf = ps.filter(function (p) { return p <= q / m; }).length;
+  var holm = 0;
+  while (holm < m && s[holm] <= q / (m - holm)) holm++;
+  var h = '<p><font face="Times New Roman"><b>m = ' + m + '</b> tests. Benjamini&ndash;Hochberg: <b>' + k +
+    '</b> descubrimientos. Bonferroni: <b>' + bonf + '</b>. Holm: <b>' + holm + '</b>.</font></p>' +
+    '<table border="2" cellpadding="4" bgcolor="#ffffff"><tr><th>i</th><th>p(i)</th><th>Bonferroni<br>q/m</th><th>BH<br>(i/m)q</th><th>Veredicto BH</th></tr>';
+  for (var i = 1; i <= m; i++) {
+    h += '<tr><td><tt>' + i + '</tt></td><td><tt>' + s[i - 1].toPrecision(3) + '</tt></td><td><tt>' +
+      (i <= bonf ? '&#10004;' : '&#10008;') + ' ' + (q / m).toPrecision(3) + '</tt></td><td><tt>' + (i / m * q).toPrecision(3) + '</tt></td><td>' +
+      (i <= k ? '<font color="#008000" class="parpadeo"><b>&iexcl;DESCUBRIMIENTO LEG&Iacute;TIMO!</b></font>'
+              : '<font color="#ff0000">&#9760; <b>&iexcl;HUMO / ARTEFACTO ESPURIO!</b></font>') + '</td></tr>';
+  }
+  document.getElementById("salida").innerHTML = h + '</table>';
+}
+
+function normal() { return Math.sqrt(-2 * Math.log(1 - Math.random())) * Math.cos(2 * Math.PI * Math.random()); }
+// cola normal a dos lados, Abramowitz-Stegun 7.1.26 (error < 1.5e-7, de sobra para esto)
+function p2(z) {
+  var x = Math.abs(z) / Math.SQRT2, t = 1 / (1 + 0.3275911 * x);
+  return t * (0.254829592 + t * (-0.284496736 + t * (1.421413741 + t * (-1.453152027 + t * 1.061405429)))) * Math.exp(-x * x);
+}
+
+function muro() {
+  var n = 100, v = 60, X = [], ps = [], hits = [];
+  for (var j = 0; j < v; j++) {
+    var c = [], mu = 0, sd = 0;
+    for (var i = 0; i < n; i++) { c.push(normal()); mu += c[i] / n; }
+    for (i = 0; i < n; i++) { c[i] -= mu; sd += c[i] * c[i]; }
+    sd = Math.sqrt(sd);
+    X.push(c.map(function (x) { return x / sd; }));
+  }
+  for (var a = 0; a < v; a++) for (var b = a + 1; b < v; b++) {
+    var r = 0;
+    for (i = 0; i < n; i++) r += X[a][i] * X[b][i];
+    var p = p2(Math.atanh(r) * Math.sqrt(n - 3)); // Fisher z
+    ps.push(p);
+    if (p < 0.05) hits.push([p, a + 1, b + 1, r]);
+  }
+  hits.sort(function (x, y) { return x[0] - y[0]; });
+  var k = bh(ps, 0.05), h = '<p><font face="Times New Roman" size="4">De 1770 correlaciones entre ruido puro, <b>' + hits.length +
+    '</b> salen con p &lt; 0,05. &iexcl;Paper!</font></p><p><font face="Courier New" size="2">';
+  hits.slice(0, 5).forEach(function (x) {
+    h += 'HALLAZGO: Var' + x[1] + ' &harr; Var' + x[2] + ' (r = ' + x[3].toFixed(2) + ', p = ' + x[0].toPrecision(2) + ')' +
+      (x[0] < 0.001 ? '***' : x[0] < 0.01 ? '**' : '*') + '<br>';
+  });
+  h += '...</font></p><p><font face="Times New Roman" size="5" color="#ff0000"><b>Tras Benjamini&ndash;Hochberg (q = 0,05): k = ' + k +
+    ' descubrimientos.</b></font></p>' +
+    (k ? '<p><font face="Comic Sans MS">Esta vez se col&oacute; alguno. Con ruido puro le pasa a uno de cada veinte papers, m&aacute;s o menos: dale otra vez.</font></p>'
+       : '<p><font face="Comic Sans MS">Paper retirado. Al menos los asteriscos eran bonitos.</font></p>');
+  document.getElementById("paper").innerHTML = h;
+}
+</script>
+
+</body>
+</html>
